@@ -11,7 +11,7 @@ EXTRA_DIST = \
 	README.md \
 	CONTRIBUTING.md
 
-include doc/Makefile.am
+# include doc/Makefile.am
 
 distclean-local:
 	-rm -rf autom4te.cache
