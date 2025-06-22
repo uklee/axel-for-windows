@@ -49,7 +49,7 @@ You may simply use [pre-built releases](https://github.com/uklee/axel-for-window
 
 ## Using Axel on Native Windows (Outside MSYS)
 
-Although you can use the built axel.exe inside the MSYS environment, with a few additional steps you can run it directly from native Windows.
+Although you can use the built `axel.exe` inside the MSYS environment, with a few additional steps you can run it directly from native Windows.
 
 1. **Create a folder and copy the following files into it:**  
    ```
