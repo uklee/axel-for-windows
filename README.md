@@ -4,7 +4,15 @@
 
 [**Axel**](https://github.com/axel-download-accelerator/axel) is a lightweight CLI download accelerator. While its more powerful alternative, [**aria2**](https://github.com/aria2/aria2), offers a wider range of features, Axel is significantly easier to use when the goal is *just download acceleration*. However, Axel is originally written using POSIX APIs, which makes it incompatible with Windows. This repository provides a version of Axel that works on Windows.
 
-Porting POSIX-based code to Windows typically involves removing all POSIX dependencies (e.g., `arpa/inet.h`) and rewriting them using Windows-native APIs. However, since Axel relies heavily on POSIX for its functionality, this would essentially require a complete rewrite. Instead, we use **MSYS2** to allow minimal code modifications while enabling Axel to run on Windows.
+Porting POSIX-based code to Windows typically involves removing all POSIX dependencies (e.g., `arpa/inet.h`) and rewriting them using Windows-native APIs. However, since Axel relies heavily on POSIX for its functionality, this would essentially require a complete rewrite. Instead, we use MSYS2 to allow minimal code modifications while enabling Axel to run on Windows.
+
+---
+
+## Using Pre-built Release
+
+You may simply use pre-built releases provided in this repository. However, you should still follow [this](#Using-Axel-on-Native-Windows-(Outside-MSYS)) to use this on native Windows environment with SSL verification support.
+
+
 
 ---
 
@@ -19,7 +27,7 @@ Porting POSIX-based code to Windows typically involves removing all POSIX depend
 3. **Install required packages**  
    Run the following command in the MSYS shell:
    ```bash
-   pacman -S gcc autotools gettext pkg-config openssl openssl-devel
+   pacman -S gcc autotools autoconf-archive gettext-devel pkg-config openssl-devel
    ```
 
 4. **Clone this repository**  
@@ -52,7 +60,7 @@ Although you can use the built axel.exe inside the MSYS environment, with a few 
    ```
 
 2. **Obtain an SSL certificate file**  
-   To enable OpenSSL's certificate verification, copy cert.pem from:
+   To enable OpenSSL's certificate verification, copy `cert.pem` from:
 
    `msys64/usr/ssl/cert.pem`, or
 
