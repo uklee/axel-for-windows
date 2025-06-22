@@ -22,20 +22,20 @@ Porting POSIX-based code to Windows typically involves removing all POSIX depend
    pacman -S gcc autotools gettext pkg-config openssl openssl-devel
    ```
 
-4. **Clone this repository**
+4. **Clone this repository**  
    ```bash
    git clone https://github.com/uklee/axel-for-windows.git
    cd axel-for-windows
    ```
 
-5. **Build Axel**
+5. **Build Axel**  
    ```bash
    autoreconf -i
    ./configure
    make
    ```
 
-6. **The `axel.exe` binary should now be available for use.**
+6. **The `axel.exe` binary should now be available for use.**  
 
 ---
 
@@ -43,7 +43,7 @@ Porting POSIX-based code to Windows typically involves removing all POSIX depend
 
 Although you can use the built axel.exe inside the MSYS environment, with a few additional steps you can run it directly from native Windows.
 
-1. **Create a folder and copy the following files into it:**
+1. **Create a folder and copy the following files into it:**  
    ```
    axel.exe
    msys64/usr/bin/msys-2.0.dll
@@ -51,18 +51,18 @@ Although you can use the built axel.exe inside the MSYS environment, with a few 
    msys64/usr/bin/msys-ssl-3.dll
    ```
 
-2. **Obtain an SSL certificate file**
+2. **Obtain an SSL certificate file**  
    To enable OpenSSL's certificate verification, copy cert.pem from:
 
    `msys64/usr/ssl/cert.pem`, or
 
    download from [https://curl.se/docs/caextract.html](https://curl.se/docs/caextract.html).
 
-3. **Set the environment variable**
+3. **Set the environment variable**  
    Add the following to your Windows environment variables:
    ```
    SSL_CERT_FILE=<path-to-cert.pem>
    ```
 
-4. **Run Axel**
+4. **Run Axel**  
    You can now run axel.exe from that folder or add the folder to your %PATH% to use it system-wide.
