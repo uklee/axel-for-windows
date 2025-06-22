@@ -10,7 +10,7 @@ Porting POSIX-based code to Windows typically involves removing all POSIX depend
 
 ## Using Pre-built Release
 
-You may simply use pre-built releases provided in this repository. However, you should still follow [this](#Using-Axel-on-Native-Windows-(Outside-MSYS)) to use this on native Windows environment with SSL verification support.
+You may simply use pre-built releases provided in this repository. However, you should still follow [this](#using-axel-on-native-windows-outside-msys) to use this on native Windows environment with SSL verification support.
 
 
 
