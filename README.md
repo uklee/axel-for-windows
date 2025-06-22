@@ -65,4 +65,4 @@ Although you can use the built axel.exe inside the MSYS environment, with a few 
    ```
 
 4. **Run Axel**  
-   You can now run axel.exe from that folder or add the folder to your %PATH% to use it system-wide.
+   You can now run `axel.exe` from that folder or add the folder to your `%PATH%` to use it system-wide.
